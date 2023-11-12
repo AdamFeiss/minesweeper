@@ -16,10 +16,10 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rsvk3"]
-size = Vector3(60, 2, 60)
+size = Vector3(20, 2, 20)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5uj2t"]
-size = Vector3(60, 2, 60)
+size = Vector3(20, 2, 20)
 
 [node name="Main" type="Node"]
 
