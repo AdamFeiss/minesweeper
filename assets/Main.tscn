@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfdo71hgg84jd"]
+[gd_scene load_steps=8 format=3 uid="uid://cfdo71hgg84jd"]
 
 [ext_resource type="PackedScene" uid="uid://cqvkclxrghcir" path="res://assets/Player.tscn" id="1_x8x5q"]
+[ext_resource type="PackedScene" uid="uid://dgjmp2v08f3gy" path="res://assets/Rock.tscn" id="2_h0nmo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_44qo2"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -43,3 +44,6 @@ mesh = SubResource("BoxMesh_5uj2t")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_x8x5q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12852, 0)
+
+[node name="Node3D" parent="." instance=ExtResource("2_h0nmo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.66427, 4.23992, 0)

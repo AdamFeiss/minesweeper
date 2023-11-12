@@ -1,5 +1,17 @@
-[gd_scene format=3 uid="uid://dgjmp2v08f3gy"]
+[gd_scene load_steps=3 format=3 uid="uid://dgjmp2v08f3gy"]
 
-[node name="Rock" type="RigidBody3D"]
+[ext_resource type="ArrayMesh" uid="uid://dpus4htdynerl" path="res://assets/models/rock.obj" id="1_04uxb"]
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="."]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_30nnb"]
+points = PackedVector3Array(0.440886, 0.0880441, 0.662711, 0.00899318, 0.0639576, -0.825814, -0.0382733, 0.0182634, -0.767196, -0.716416, 0.449832, 0.522989, 0.415746, 0.734295, 0.0141069, 0.488366, -0.391409, -0.12919, -0.670032, -0.106855, 0.403559, -0.718523, 0.450639, -0.51784, 0.775829, -0.0316896, -0.297011, 0.299388, 0.498552, -0.686448, -0.419119, -0.196628, -0.414369, -0.301966, 0.757791, 0.229517, 0.563513, 0.449177, 0.448874, 0.0566147, -0.246269, 0.468245, -0.231386, -0.417021, -0.105252, -0.278483, 0.4472, 0.661026, 0.495231, -0.0103058, 0.672359, -0.761011, 0.111846, -0.345949, -0.557294, 0.112996, 0.602947, 0.434252, -0.359808, -0.246867, -0.769206, 0.208249, 0.380508, 0.0805502, 0.0644694, -0.822283, 0.780554, 0.0152792, -0.226048, -0.134742, 0.447195, 0.661012, -0.477939, 0.208297, 0.649051, -0.298978, 0.752161, 0.179079, 0.782756, -0.0335281, -0.226461, 0.41214, 0.729309, -0.034104, 0.371352, -0.419945, -0.153907, 0.00899318, 0.112163, -0.823504, -0.763989, 0.0875161, 0.353221, -0.354867, 0.111351, 0.646372)
+
+[node name="Node3D" type="RigidBody3D"]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = ExtResource("1_04uxb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_30nnb")
